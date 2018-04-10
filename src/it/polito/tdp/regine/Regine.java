@@ -53,9 +53,7 @@ public class Regine {
 	private boolean posizioneSicura(List<Integer> scacchiera, int livello, int n, int mossa) {
 		
 		for(int riga=0; riga<livello; riga++) {
-	
-			// [ R1 = riga C1 = scacchiera.get(riga) R2 = livello C2 = mossa ]	
-			
+				
 			// colonne
 			if(scacchiera.get(riga) == mossa)
 				return false;
@@ -73,4 +71,14 @@ public class Regine {
 		return true;
 	}
 	
+	/* 
+	 * [Q] --> R1 = riga, C1 = schacchiera.get(riga)
+	 *  
+	 * [Q] --> R2 = livello, C2 = mossa
+	 * 
+	 * Diagonale destra: R1 - C1 == R2 - C2
+	 * 
+	 * Diagonale sinistra: R1 + C1 = R2 + C2 
+	 */	
+
 }
